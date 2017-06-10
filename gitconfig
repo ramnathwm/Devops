@@ -1,0 +1,35 @@
+# create a directory  for git repo
+	$ mkdir Repo
+# To see information about git command 
+	$ git  config  --help
+# make it to wc or intilize repository 
+	$git init 
+# config username  and email address to  git 
+	$ git config --global user.name=ramnathwm
+        $ git config --global user.email"ramnath.wm@gmail.com"
+# display the list of configured values
+ 	$ git config -l 
+	$ git config user.name
+	$ git config user.email
+# to unset configured username and user eamil
+ 	$ git config --global --unset user.name	
+	$ git config --global --unset user.email
+ # To add remote repository to git 
+	$ git remote add origin https://github.com/ramnathwm/Devops.git
+ # To clone remote repository from url 
+ 	$ git clone https://github.com/ramnathwm/Devops.git
+ # Create a file in WC
+	$  vi ramnathwm1stfile
+# To know the tracked files or untracked or which are versionned or not versioned or which are added to git and which not added in git
+	$ git status 
+# Add files to staging area 
+	$ git add ramnathwm1stfile 
+# now see status of file  after add 
+	$ git status 
+# after file sstagged please commit fileinto git 
+	$ git commit -m "this is wm first commit"
+# now see status of file  commit 
+	$ git status
+# now update our repository to remote repository or push to remote repository  
+	$ git push 
+ 
