@@ -1,5 +1,5 @@
 Hi this file is created to rename file name And  obesrve what happen if we change file name.. this file name is intially "filetorename" and
 change this name to "name-renamed" file.
 adding the data after renamed. 
-2 lines added after name changed to observe how it will effect remote repository content
-
+ lines added after name changed to observe how it will effect remote repository content
+ git doesent explicitly track file  movement if we change file name it will not store anything.
