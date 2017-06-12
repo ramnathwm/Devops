@@ -2,6 +2,8 @@
 	$ mkdir Repo
 # To see information about git command 
 	$ git  config  --help
+	$ git commit --help
+	$git status --help
 # Make it to wc or intilize repository 
 	$git init 
 # Config username  and email address to  git 
@@ -14,11 +16,11 @@
 # Unset configured username and user eamil
  	$ git config --global --unset user.name	
 	$ git config --global --unset user.email
- # Add remote repository to git 
+# Add remote repository to git 
 	$ git remote add origin https://github.com/ramnathwm/Devops.git
- # Clone remote repository from url 
+# Clone remote repository from url 
  	$ git clone https://github.com/ramnathwm/Devops.git
- # Create a file in WC
+# Create a file in WC
 	$  vi ramnathwm1stfile
 # To know the tracked files or untracked or which are versionned or not versioned or which are added to git and which not added in git
 	$ git status 
@@ -33,7 +35,7 @@
 # Now update our repository to remote repository or push to remote repository  
 	$ git push 
 # List the all branches 
-	$ git branch –all
+	$ git branch â€“all
 # Display see present branch 
 	$ git branch 
 ## current pointing branch is preceeded by * mark  
@@ -45,8 +47,7 @@
 # Display Branch after switch
 	$ git branch
 # Push the new branch to remote repository
-	$ git push - -set - –upstream origin ramnathecebr1
-
+	$ git push - -set - â€“upstream origin ramnathecebr1
 # Commit git config file into ramnathecebr1 branch.
 	$ git checkout ramnathecebr1
 	$ git push
@@ -54,6 +55,4 @@
 	$ git checkout master (# in which you want to merge)
 	$ git merge ramnathecebr1  (what branch you want to merge)
 # Update master branch to remote repository
-	$ git push 
-
- 	
+	$ git push
