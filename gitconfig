@@ -32,4 +32,20 @@
 	$ git status
 # Now update our repository to remote repository or push to remote repository  
 	$ git push 
- 
+# List the all branches 
+	$ git branch –all
+# Display see present branch 
+	$ git branch 
+## current pointing branch is preceeded by * mark  
+# Create New branch 
+	$ git branch branch-name
+	$ git branch ramnathecebr1
+# Switch from one branch to another 
+	$ git checkout ramnathecebr1
+# Display Branch after switch
+	$ git branch
+# Push the new branch to remote repository
+	$ git push - -set - –upstream origin ramnathecebr1
+
+# Commit git configfile into ramnathecebr1 branch.
+ 	
