@@ -1,4 +1,4 @@
-# Create a directory  for git repo
+﻿# Create a directory  for git repo
 	$ mkdir Repo
 # To see information about git command 
 	$ git  config  --help
@@ -56,3 +56,60 @@
 	$ git merge ramnathecebr1  (what branch you want to merge)
 # Update master branch to remote repository
 	$ git push
+# Displays the all commits 
+	$ git log 
+# Display 5 commits 
+	$ git log -5
+# Display particular user(ramnathem or ramnathreddyece) commits
+	##-p, which shows the difference introduced in each commit
+	$   git     log  -p
+	$ git log  –-author ramnathwm
+	$ git log –-author ramnathreddyece
+# Display list of commits made in the last two weeks:
+	$ git log  - - since =2.weeks
+# Display commits which have ”first “ word in commit (or) display commit message by pattern
+	$ git  log  - - grep “first”
+# What is git full ?
+	$ git pull does git fetch and git merge 
+# What is git fetch?
+	$  Git gathers any commits from the target branch that do not exist in your current branch and stores them in your local repository. However, it does not merge them with your current branch
+ 
+ # what  we have to do to ignore  files from working copy?
+	$ Put the excludes in your $GIT_DIR/info/exclude file, if this is specific to one tree.
+  	$ git config --global core.excludesfile ~/.gitignore and add patterns to your ~/.gitignore. 
+
+#  Display difference or display difference of working copy and staging area differences
+	$ git diff
+# Rename the file name (“filetorename”  to “name-renamed”)
+	$ git mv 
+#  Add and commit at a time ( add to tagging area and commit in ine command )
+	$ git commit –a –m “commit message”
+# Amend the commit or undo the commit 
+	$ git  commit - - amend
+## It lets you combine staged changes with the previous commit instead of committing it as an entirely new snapshot. amending doesn’t just alter the most recent commit—it replaces it entirely.
+# to chage the commit message of previus commit 
+	$ git commit --amend -m "commit message added after amend"
+
+# Unstaging the staged file.(2 files staged  and i want to unstaged 1 file)
+# First create two files(file1, file2)  and add to staging area by command $ git add file1 file2
+	$ git reset HEAD filename(which you want to unstaged  ) 
+ 	$ git reset HEAD  file2
+# What is command to display which remote is configured to git?
+	$ git remote
+# What is the command to display which url you connected ?
+	$ git remote  -v
+# Add new remote url to git?
+	$ git remote add  ramote-name  remote-url  
+	$ $ git remote add  https ://github.com/ramnathwm/Devops.git 
+	## if it is first time orfirst remote it will take origin as name
+	$ git remote add ram  https://github.com/ramnathwm/Devops.git
+
+ # What is git fetch ?	
+	$ git fetch bring the commits row c from remote but it will not merge into wc
+#What is the command to  Rename the remote  name?
+	$ git remote rename old-name new-name
+	$ gir remote rename ram challa
+# What is command to remove remote-name  ?
+	$ git remote rm challa
+
+
