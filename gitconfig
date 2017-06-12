@@ -47,5 +47,13 @@
 # Push the new branch to remote repository
 	$ git push - -set - –upstream origin ramnathecebr1
 
-# Commit git configfile into ramnathecebr1 branch.
+# Commit git config file into ramnathecebr1 branch.
+	$ git checkout ramnathecebr1
+	$ git push
+# Merge ramnathecebr1 branch into master branch
+	$ git checkout master (# in which you want to merge)
+	$ git merge ramnathecebr1  (what branch you want to merge)
+# Update master branch to remote repository
+	$ git push 
+
  	
