@@ -180,3 +180,23 @@ Without an optional path parameter, all files and subdirectories of the current 
 	$ git archive master  --format=tar -o releaseV1.0
 # to test that file is tar or not simply copy into one location and extract $tar –xvf rleaseV1.0
 	
+## At the time of middle of some work  some time we will change branch . that time we don’t want to commit half work that time we use stash . 
+# To see stash list 
+	$ git stash list
+# To do stash 
+	$ git stash 
+# To apply stash 
+	$ git stash apply
+# To clear stash 
+	$ git stash clean
+# To change or modify commit message ?
+	$ git commit - -amend –m”edited commit message”
+##HEAD is pointer to current branch.
+##INDEX is PROPOSED NEXT commit 
+## to revert orundoing merge 
+	$ git revert –m HEAD.
+#sub module allow you to keep git repository as subdirectory of another module .
+	$ git submodule add https://gitthub.com/ram/project3 
+## If we clone submodule project we will not get content of submodule . to get content of sub module 
+	$ git clone - -recursive url 
+ 
