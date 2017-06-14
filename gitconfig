@@ -160,4 +160,23 @@
 # command to delete branch forcefully?
 	$git branch –D branchname
 	$ git branch –D ramnathwmbr3
- 
+# Command to integrate patch file to project ?
+	$ git apply patch-file-saved-location
+# Exclude commit in master branch ?
+	$ git branch-name - -not master
+# Display the list of available formats of archive ?
+	$ git archive –l
+# create archive with prefix name?
+	$ git archive –prefix=<prepix>/
+## --format=<fmt>
+Format of the resulting archive: tar or zip
+## --output=<file>
+Write the archive to <file>
+## <path>
+Without an optional path parameter, all files and subdirectories of the current working directory are included in the archive.
+## -o used to specify output filename
+# Create a Archive.
+	$ git archive branch-name –o file-name
+	$ git archive master  --format=tar -o releaseV1.0
+# to test that file is tar or not simply copy into one location and extract $tar –xvf rleaseV1.0
+	
