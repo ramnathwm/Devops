@@ -1,5 +1,62 @@
 This file contain ant commands and notes.
 BUILD: build is converting source file into Executable component like jar,war, Ear.
-* Buildconfiguration file is Build.xml
-* To create Build go to ant installed directry and execut command ant
-*
+# Buildconfiguration file is Build.xml
+# To create Build go to ant installed directry and execut command ant
+#TO  execute build.xml if name changed
+	$ ant –f filename
+	$ ant –f config.xml
+	$ ant –file cinfig.xml
+	$ ant –buildfile config.xml
+# 3 main buildn blocks are there in ant script
+	1) project	
+	2) target 
+	3) tasks
+#root elememt of ant script is project its have 3 attributess. Name, default, basedir.
+
+<project name=”project1” default=”target2” basedir=”c/Desktop/Ant”
+
+# name: name of project, default target is used when no targets specified. And basedir base directory of project.
+# target is collection of task that what you want to be run as 1 unit. target have dependency on another target . deploy target may have depends on pakcge and package may dependency on compile target.
+
+<target name=”target1” depends =”target2”>
+----- 
+-----
+<target name=”target2”>
+-----
+-----
+# task will perform works in ant. 
+# javac i s tag in task to compile source code. This have 2 attributs . 1 is source dir and second is destination dir.
+<javac srcdir =”/temp//src/” destdir=”/tmp/classes”
+# echo is used to print text 
+# properties are key value pairs .
+< property name=”a” value=20/>
+# We can change propert at th time of running script by ant –D propertyname=value
+# we can also define property file in  ant.
+# using jar tag we crate jar file.
+<jar destfile=”app.jar” basedir=”/classes”>
+# FILElist is  explicit list of files
+# fileset is group of files.we use pattern to define fileset . pattern matched files comes and one group.
+# we will debug ant script ant –D
+# we will all targets of build file by  ant –p command.
+# to execute a system commands we use exec 
+<exec executable=”bin/bash”>
+< arg value  = scriptname>
+<arg value =scriptlocation>
+</exec>
+# ant all is used to call another target in present target.
+<target name=”default”>
+<antcall target=”target2”>
+</antcall>
+</target>
+# ant task is used to include another build.xml in present one.
+<ant antfile =”subproject/subbuild.xml”/>
+# class path contain all jar files needed by project 
+<path id=”calsspath.base”>
+<path element location =” “/>
+# referring class path 
+<classpath refid=”claspath.base/>
+# we will call target from command line by $ ant target-name
+# To build we need source code build.xml and processes 
+# if  build fails its show the build failed message and we can see error log . if we will find reason to build file we will email error log to developer.
+# Common build issues are class path not set properly, environment related issues, dependency jar fiels are not copid properly.
+
