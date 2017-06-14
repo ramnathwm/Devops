@@ -28,7 +28,7 @@
 	$ git add ramnathwm1stfile 
 # See status of file  after add 
 	$ git status 
-# After file sstagged please commit fileinto git 
+# After file stagged please commit fileinto git 
 	$ git commit -m "this is wm first commit"
 # Now see status of file  commit 
 	$ git status
@@ -54,6 +54,15 @@
 # Merge ramnathecebr1 branch into master branch
 	$ git checkout master (# in which you want to merge)
 	$ git merge ramnathecebr1  (what branch you want to merge)
+#What is command to delete Branch?
+	$ git branch –d branch-name
+# What is command to delete Branch force-fully ?
+	$ git branch –D branch-name
+#What is command to delete remote Branch?
+	$ git push remote-name  - -delete  branch-name
+	$ git push origin –delete serverfix
+##there are 2 ways to bring changes from one branch to another branch . merge and rebase .
+##$git checkout experiment  and $git rebase master 
 # Update master branch to remote repository
 	$ git push
 # Displays the all commits 
@@ -62,7 +71,7 @@
 	$ git log -5
 # Display particular user(ramnathem or ramnathreddyece) commits
 	##-p, which shows the difference introduced in each commit
-	$   git     log  -p
+	$ git     log  -p
 	$ git log  –-author ramnathwm
 	$ git log –-author ramnathreddyece
 # Display list of commits made in the last two weeks:
@@ -112,4 +121,43 @@
 # What is command to remove remote-name  ?
 	$ git remote rm challa
 
+# What is tagging?
+	$ this functionality is used to mark release point.
+# What is command to list all tags?
+	$ git tag 
+# what is the command to list one category of tags(v1.8) type?
+	$ git tag –l “V1..8”
+# How many types of tags are available ?
+	$ light weight and annotated 
+	$ light weight are much like branch .that doesn’t change and its just point to specific commit .
+	$ Annotated  type of tags stored full of objects in git database and contain tagger name, email, having tagging message and can be signed and verified with privacy guard(GNC).
+# What is command to create a light weight tag?
+	$ git tag tag-name
+	$ git tag version1.0
+# What is command to create a annotated tag?
+	$ git tag –a tag-name “tag-message”
+# What we have to do to update remote repository?
+	$ By default push  does  not transfer tags to remote servers. You have to explicitly share tags to remote sever repository.
+# What is command to push tag to remote?
+	$ git push origin tag-name
+	$ git push origin V1.0
+#What is the command to push more tags at a time?
+	$ git push remote-name - -tags
+	$ git push origin - -tags
+## we can’t checkout tags in git .  If you want to put a version of your repository in your working directory that looks like a specific tag, you can create a new branch at a specific tag with git checkout -b [branchname] [tagname]:
+  git checkout -b version2 v2.0
+# what is alias in git and how we define alias?
+	$ defining short name for alias name s for git commands.
+	$ git config  - -global alias  co checkout 
+ 	$ git config  - -global alias br branch
 
+# What is Branching ?
+	$ diverging main development and continue to do work  without messing main line.
+# Command to know which branches are merged in current branch?
+	$ git branch --merged 
+# Command to know which branches are not merged in current branch?
+	$ git branch –no-merged
+# command to delete branch forcefully?
+	$git branch –D branchname
+	$ git branch –D ramnathwmbr3
+ 
