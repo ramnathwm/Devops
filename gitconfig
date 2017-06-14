@@ -199,4 +199,4 @@ Without an optional path parameter, all files and subdirectories of the current 
 	$ git submodule add https://gitthub.com/ram/project3 
 ## If we clone submodule project we will not get content of submodule . to get content of sub module 
 	$ git clone - -recursive url 
- 
+# to add folder to git reppo we have to crate repo and add one file inthat directory. we ca't add empty folder. after add a file inthat directory only it shows in git status. 

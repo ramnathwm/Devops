@@ -1,0 +1,5 @@
+This file contain ant commands and notes.
+BUILD: build is converting source file into Executable component like jar,war, Ear.
+* Buildconfiguration file is Build.xml
+* To create Build go to ant installed directry and execut command ant
+*
