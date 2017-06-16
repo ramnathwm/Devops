@@ -1,0 +1,5 @@
+<property name="name" value="RAMNATH REDDY"/>
+<property name="age" value="28"/>
+<property name="Qualification" value="BTECH"/>
+<property name="Working" value="Devops"/>
+	

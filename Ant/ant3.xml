@@ -1,0 +1,28 @@
+
+
+<project name="project1" default="useproperty" basedir=".">
+	<target name="target1" depends="propertydefine">
+		<echo> 1st target executed</echo>
+			<echo>In second target we define property and we use those property in 3rd target </echo>
+	</target>
+	
+	<target name="propertydefine" >
+		<echo> 2nd target executed</echo>
+		<echo>defining properties></echo>
+		<property name="name" value="RAMNATH REDDY"/>
+		<property name="age" value="28"/>
+		<property name="Qualification" value="BTECH"/>
+		<property name="Working" value="Devops"/>
+	
+		
+
+	</target>
+	
+	<target name="useproperty" depends="propertydefine" >
+		<echo> In this target  we use defined 						propertyvalue</echo>
+		<echo>This is ${name} and my age is ${age}. I did my ${Qualification} in JNTU Hyderabad.Currently working as  ${Working} engineer   		
+		</echo>
+</target>
+
+	
+</project>

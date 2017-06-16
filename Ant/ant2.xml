@@ -1,0 +1,15 @@
+<project name="project1" default="target2" >
+
+
+	<target name="compile" >
+		<echo> in first target java claafiles are created in destdir</echo>
+		<javac  includeantruntime="false" srcdir ="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVA\javacode" 
+			destdir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVA\javaclasses"/>
+
+	</target>
+	
+	<target name="target2" depends="compile">
+		<echo> 2nd target executed</echo>
+	</target>
+	
+</project>	

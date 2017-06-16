@@ -1,0 +1,17 @@
+
+
+<project name="project1" default="target2" basedir=".">
+	<target name="target1" depends="target3">
+		<echo> 1st target executed</echo>
+	</target>
+	
+	<target name="target2" depends="target1" >
+		<echo> 2nd target executed</echo>
+	</target>
+	
+	<target name="target3">
+		<echo> 3rd target executed</echo>
+		<echo> This  build fiel for testing purpose of  define default target  and depends option b/w targets.
+			</echo> 
+	</target>
+</project>
