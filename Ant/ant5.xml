@@ -1,0 +1,19 @@
+
+
+<project name="project1" default="jar" >
+	<target name="compile" >
+		<echo> complie  target executed</echo>
+		<javac  includeantruntime="false" srcdir ="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVA\javacode" 
+			destdir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVA\javaclasses"/>
+			  
+	</target>
+	
+	<target name="jar" depends="compile" >
+		<echo> This target create a jar </echo>
+	<jar destfile="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVA\Jar\helloworld.jar"
+		basedir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVA\javaclasses"/>
+	
+	</target>
+	
+	
+</project>

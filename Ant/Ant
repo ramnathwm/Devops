@@ -32,6 +32,10 @@ BUILD: build is converting source file into Executable component like jar,war, E
 < property name=”a” value=20/>
 # We can change propert at th time of running script by ant –D propertyname=value
 # we can also define property file in  ant.
+We will define propert=value in file like below.
+Ram.properties(file name)
+name="RAMNATH REDDY"
+age="28" 
 # using jar tag we crate jar file.
 <jar destfile=”app.jar” basedir=”/classes”>
 # FILElist is  explicit list of files

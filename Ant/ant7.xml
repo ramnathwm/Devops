@@ -1,0 +1,38 @@
+<?xml version="1.0" ?> 
+<project name="JAVAAPP" default="war">
+
+	<path id="compile.classpath">
+		<fileset dir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\WebContent\WEB-INF\lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+
+	<target name="init">
+		<mkdir dir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\build/classes"/>
+		<mkdir dir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\dist" />
+	</target>
+	
+	<target name="compile" depends="init" >
+		<javac includeantruntime="false"  destdir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\build/classes" debug="true" srcdir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\src">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+	
+	<target name="war" depends="compile">
+		
+
+<war destfile="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\dist/JAVAAPP.war" 
+
+webxml="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\WebContent\WEB-INF/web.xml">
+
+			<fileset dir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\WebContent"/>
+			<lib dir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\WebContent\WEB-INF\lib"/>
+			<classes dir="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\JAVAAPP\build\classes"/>
+		</war>
+	</target>
+	
+	
+	
+</project>
+

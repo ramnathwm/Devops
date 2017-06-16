@@ -9,10 +9,8 @@
 	<target name="propertydefine" >
 		<echo> 2nd target executed</echo>
 		<echo>defining properties></echo>
-		<property file="ant4.properties"/>
-		
-	
-		
+		<property file="C:\Users\Lakshmikanth\Desktop\GITREPO\Devops\Ant\ant4.properties.txt"/>
+				
 
 	</target>
 	
@@ -20,7 +18,8 @@
 		<echo> In this target  we use defined 						propertyvalue</echo>
 		<echo>This is ${name} and my age is ${age}. I did my ${Qualification} in JNTU Hyderabad.Currently working as  ${Working} engineer   		
 		</echo>
-</target>
+	</target>
+
 
 	
 </project>

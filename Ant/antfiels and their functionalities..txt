@@ -1,0 +1,7 @@
+ant1.xml	Basic ant file 
+ant2.xml   	Compile java code
+ant3.xml   	Defining properties in build file 
+ant4.xml   	Define properties in ome file and invoke taht file in ant file
+ant5.xml   	Create a jar file after compelition of code
+ant6.xml	create a simple war file 
+ant7.xml	create war of JAVAAPP {OR} create a complex war .
