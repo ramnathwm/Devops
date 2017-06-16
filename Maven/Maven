@@ -1,0 +1,43 @@
+Mavn have folder structure. Maven specifya 3 things to identify artifacts uniquely . those are group-id, artifact-id and version.
+Maven Configuration file is Pom.xml
+There are 3 built-in lifecycles are there
+1)default
+2)clean
+3)site
+Defult life cycle have 6 phases. those are Validate, Complie,Test, Packege, Install, Deploy.
+validate verify syntactical of pom.xmland validate all necessary information is avilable or not.
+comple phase convert the source code it classes. 
+test phase will execute unit test cases and test the code.
+package phase will make the jar , war, ear  Executable component.
+Install phase install packege into local repository.MVN install copy artifact into local repository.
+Deploy phase COPY THE PACKAGE INTO WEBSERVER or release environment and copy final packege into remote repository for sharing with other Developers.MVN deploy copy the artifact in to remote repository.
+Build profiel is set of configuation value .types of profiles are project,peruser,global.
+Mavven repository is place where all project jars, libraries are plgins or any othe project artifacts are can be stored and used by maven easily.
+Repositories are local, central, remote.
+local is local to individual machine.Its get created at first time we run any maven command. location is $Home/.M2.
+Central repository is provided by maven community . its contain large number of commanly used labraries.
+When maven doesnt found in local repository its look inro central repository.
+Some time maven can't find in cental repository also that time its look into remote repository. It is developers own custom repository contain required jar are other project jars.
+In maven we dont have classpath inside of this we use dependency.
+<dependencies>
+	<dependency>
+		<groupid>-----</groupid>
+		<artifactid>---</artifactid>
+		<version>---</version>
+	</dependency>
+
+</dependencies>
+
+nexus and artifatory are version controls for jar,war,ear.
+Scope define depedency . scope define when we want to load jarfiles . defaltt scope is compile. scopes are complie, runtime,provided,test,system,import.
+Actual task is done by plugin in maven.
+For default tasks plugins are wrote by default in pom.xml .To call our own tasks we have to write plugins our own. 
+<plugins>
+	<plugin>
+		<groupid>--------</groupid>
+		<artifactid>-----</artifactid>
+		<version>--------</versionid>
+	</plugin>
+</plugins>
+
+		
