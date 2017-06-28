@@ -40,4 +40,8 @@ For default tasks plugins are wrote by default in pom.xml .To call our own tasks
 	</plugin>
 </plugins>
 
+
+# to create a maven project we use mvn archtype: generate command.
+
 		
+#mv archetype:generate
